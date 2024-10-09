@@ -30,7 +30,7 @@ const closePopup = () => {
 
 closePopupBtn.addEventListener("click", closePopup);
 
-//ОШИБКА
+//ВЫВОД ОШИБКИ
 const errorAppear = () => {
   error.textContent = "one of the numbers outside the range from 100 to 300";
   error.style.top = "0";
@@ -43,7 +43,7 @@ const errorAppear = () => {
 const getImage = async (w, h) => {
   try {
     let image = await fetch(`https://dummyimage.com/${w}x${h}/`);
-    if ((image.status = 200)) {
+    if ((image.status === 200)) {
       openPopupImage(image.url);
     }
     console.log(image);
